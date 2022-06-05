@@ -1,0 +1,9 @@
+{% extends "web_app/base.html" %}
+
+{% block content %}
+    <form action="/create-note/{{ folder }}" method="post">
+        {% csrf_token %}
+        <textarea name="content" rows="18"></textarea>
+        <input type="submit">
+    </form>
+{% endblock %}

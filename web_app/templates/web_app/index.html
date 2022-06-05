@@ -1,0 +1,18 @@
+{% extends "web_app/base.html" %}
+
+{% block content %}
+    <form action="/create-folder" method="post">
+        {% csrf_token %}
+        <label>Folder-Name:</label>
+        <input name="name" type="text">
+        <input type="submit">
+    </form>
+
+    <br><hr><br>
+
+    {% for f in folders %}
+        <a href="/{{ f.id }}/notes">
+            <p class="folder">{{ f.name }}</p>
+        </a>
+    {% endfor %}
+{% endblock %}

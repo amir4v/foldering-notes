@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foldering Notes</title>
+    <style>
+        body{
+            padding: 1%;
+            background-color: rgb(231, 231, 231);
+        }
+
+        *{
+            font-family: "Vazir Code";
+            font-size: 18px;
+            direction: rtl;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .folder{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 3px;
+            margin: 1%;
+            display: inline-block;
+        }
+
+        .note{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 1%;
+        }
+
+        textarea{
+            width: 99%;
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">HOME</a>
+    <br>
+    <br>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
